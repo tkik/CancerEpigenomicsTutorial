@@ -6,8 +6,10 @@ DATA_DIR<-"~/data"
 OUT_DIR<-"~/rnbeads_analysis/"
 #GEO_ACCESSION<-"GSE29290"
 #GEO_URL<-"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29290"
+
 ###### load data from GEO
 
+rnb.options(disk.dump.big.matrices = FALSE)
 rnb.set<-rnb.read.geo("GSE29290")
 
 ## or if the connection does not work
