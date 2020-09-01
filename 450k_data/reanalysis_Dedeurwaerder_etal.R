@@ -33,7 +33,7 @@ pheno(rnb.set)
 
 ####### full analysis
 #options(fftempdir="/mnt/data-ssd/tmp/")
-options(fftempdir="/tmp/")
+options(fftempdir="/ngs_share/tmp/")
 
 
 rnb.options(analysis.name = "Re-analysis of HCT116 450k data from Dedeurwaerder et al.")
