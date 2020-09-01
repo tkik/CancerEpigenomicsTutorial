@@ -2,13 +2,16 @@
 library(RnBeads)
 
 DATA_DIR<-"~/data"
-SAMPLE_SHEET_FILE<-"~Sample_sheet_complete_clean.csv"
+#SAMPLE_SHEET_FILE<-"/ngs_share/scratch/rnbeads_tutorial/Sample_sheet_complete_clean.csv"
 OUT_DIR<-"~/rnbeads_analysis/"
 #GEO_ACCESSION<-"GSE29290"
 #GEO_URL<-"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29290"
 ###### load data from GEO
 
 rnb.set<-rnb.read.geo("GSE29290")
+
+## or if the connection does not work
+rnb.set<-rnb.read.geo("/ngs_share/scratch/rnbeads_tutorial/GSE29290_series_matrix.txt.gz")
 
 ## leave out non-HCT116 samples
 non_hct116<-which(!pheno(rnb.set)[["source_name_ch1"]] %in% "Colon")
