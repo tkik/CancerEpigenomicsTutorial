@@ -4,6 +4,7 @@ library(RnBeads)
 DATA_DIR<-"~/data"
 #SAMPLE_SHEET_FILE<-"/ngs_share/scratch/rnbeads_tutorial/Sample_sheet_complete_clean.csv"
 OUT_DIR<-"~/rnbeads_analysis/"
+dir.create(OUT_DIR)
 #GEO_ACCESSION<-"GSE29290"
 #GEO_URL<-"https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE29290"
 
@@ -35,7 +36,7 @@ pheno(rnb.set)
 
 ####### full analysis
 #options(fftempdir="/mnt/data-ssd/tmp/")
-options(fftempdir="/ngs_share/tmp/")
+#options(fftempdir="/ngs_share/tmp/")
 
 
 rnb.options(analysis.name = "Re-analysis of HCT116 450k data from Dedeurwaerder et al.")
