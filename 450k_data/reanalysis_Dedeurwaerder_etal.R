@@ -11,7 +11,7 @@ dir.create(OUT_DIR)
 ###### load data from GEO
 
 rnb.options(disk.dump.big.matrices = FALSE)
-rnb.set<-rnb.read.geo("GSE29290")
+##rnb.set<-rnb.read.geo("GSE29290")
 
 ## or if the connection does not work
 rnb.set<-rnb.read.geo("/ngs_share/scratch/rnbeads_tutorial/GSE29290_series_matrix.txt.gz")
