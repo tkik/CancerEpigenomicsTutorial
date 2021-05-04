@@ -33,6 +33,12 @@ rnb.set@pheno$Sample_ID<-paste(sep="_",  pheno(rnb.set)[["Sample_Group"]], pheno
 rnb.set@pheno<-pheno(rnb.set)[c("GEO_accession", "Sample_ID", "Sample_Group", "Replicate")]
 pheno(rnb.set)
 
+#rnb.set@pheno <- pheno(rnb.set)[,c("title", "geo_accession", "description")]
+#rnb.set@pheno$Sample_Group <- ifelse(grepl("WT", rnb.set@pheno$title), "WT", "DKO")
+#rnb.set@pheno$Replicate <- gsub(".*r(1|2|3))", "\\1", pheno(rnb.set)$title)
+#rnb.set@pheno$Sample_ID<-paste(sep="_",  pheno(rnb.set)[["Group"]], pheno(rnb.set)[["Replicate"]])
+#rnb.set@pheno<-pheno(rnb.set)[c("GEO_accession", "Sample_ID", "Sample_Group", "Replicate")]
+
 
 ####### full analysis
 #options(fftempdir="/mnt/data-ssd/tmp/")
